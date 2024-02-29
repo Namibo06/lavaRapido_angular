@@ -1,0 +1,46 @@
+@media screen and (width < 580px) {
+  header{
+    padding: 30px 10px 60px 20px;
+  }
+
+  header div.title h2{
+    font-size: 30px;
+  }
+
+  div.buttons button{
+    padding:8px;
+  }
+}
+
+@media screen and (width < 480px) {
+  header{
+    padding: 30px 5px 60px 5px;
+  }
+
+  header div.title h2{
+    font-size: 25px;
+  }
+
+  div.buttons button.login{
+    margin-right: 10px;
+  }
+
+  div.buttons button{
+    padding:6px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (width < 390px) {
+  header{
+    flex-direction: column;
+  }
+
+  div.buttons{
+    margin-top: 40px;
+  }
+
+  div.buttons button.login{
+    margin-right: 30px;
+  }
+}

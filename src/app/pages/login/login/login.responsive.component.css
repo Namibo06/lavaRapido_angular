@@ -1,0 +1,5 @@
+@media screen and (width < 680px) {
+  main{
+    padding: 60px 0;
+  }
+}

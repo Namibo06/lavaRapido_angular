@@ -1,0 +1,5 @@
+@media screen and (width < 390px) {
+  footer p{
+    font-size: 16px;
+  }
+}
