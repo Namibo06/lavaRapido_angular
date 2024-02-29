@@ -5,7 +5,7 @@ import { CookieService } from 'ngx-cookie-service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  styleUrls: ['./login.component.css','./login.responsive.component.css'],
   providers:[CookieService]
 })
 export class LoginComponent {
@@ -20,6 +20,8 @@ export class LoginComponent {
   status:number=0;
   message:string='';
   callback:boolean=false;
+  messageError:string='';
+  callbackError:boolean=false;
 
   constructor(
     private service:ApiUserService,
@@ -45,10 +47,10 @@ export class LoginComponent {
       },
       error:(err)=>{
         console.log(err);
-        this.message="Email/Senha inválidos";
-        this.callback=true;
+        this.messageError="Email/Senha inválidos";
+        this.callbackError=true;
         setTimeout(()=>{
-          this.callback=false;
+          this.callbackError=false;
           window.location.href='/login';
         },3000);
       }
