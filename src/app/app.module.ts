@@ -9,20 +9,26 @@ import { RegisterComponent } from './pages/register/register/register.component'
 import { LoginComponent } from './pages/login/login/login.component';
 import { IndexComponent } from './pages/index/index/index.component';
 import { ErrorComponent } from './pages/error/error/error.component';
+import { HeaderModule } from './shared/header/header.module';
+import { FooterModule } from './shared/footer/footer.module';
+import { RegisterModule } from './pages/register/register.module';
+import { LoginModule } from './pages/login/login.module';
+import { IndexModule } from './pages/index/index.module';
+import { ErrorModule } from './pages/error/error.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    RegisterComponent,
-    LoginComponent,
-    IndexComponent,
-    ErrorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HeaderModule,
+    FooterModule,
+    RegisterModule,
+    LoginModule,
+    IndexModule,
+    ErrorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

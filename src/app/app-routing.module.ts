@@ -7,6 +7,10 @@ import { ErrorComponent } from './pages/error/error/error.component';
 
 const routes: Routes = [
   {
+    path:'',
+    component:LoginComponent
+  },
+  {
     path:'register',
     component:RegisterComponent
   },
