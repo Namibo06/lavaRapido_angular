@@ -5,8 +5,12 @@
     </div><!--title-->
 
     <div class="buttons">
-      <button type="button"><a [routerLink]="['/login']">Iniciar Sessão</a></button>
-      <button type="button"><a [routerLink]="['/register']">Cadastro</a></button>
+      <a [routerLink]="['/login']">
+        <button type="button" class="login">Iniciar Sessão</button>
+      </a>
+      <a [routerLink]="['/register']">
+        <button type="button" class="cadastro">Cadastro</button>
+      </a>
     </div><!--buttons-->
   </header>
 </div><!--container-header-->
