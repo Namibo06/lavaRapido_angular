@@ -1,1 +1,21 @@
-<p>login works!</p>
+<div class="login-container">
+  <app-header-shared></app-header-shared>
+
+  <main>
+    <p *ngIf="callback">{{message}}</p>
+    <form action="" method="post" (submit)="autenticar()">
+
+      <div class="camp">
+        <input type="email" name="email" placeholder="Email" [(ngModel)]="email" required>
+      </div><!--camp-->
+
+      <div class="camp">
+        <input type="password" name="password" placeholder="Senha" [(ngModel)]="password" required>
+      </div><!--camp-->
+
+      <button type="submit">Entrar</button>
+    </form>
+  </main>
+
+  <app-footer-shared></app-footer-shared>
+</div><!--login-container-->

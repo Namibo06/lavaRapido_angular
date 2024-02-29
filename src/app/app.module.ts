@@ -15,6 +15,7 @@ import { RegisterModule } from './pages/register/register.module';
 import { LoginModule } from './pages/login/login.module';
 import { IndexModule } from './pages/index/index.module';
 import { ErrorModule } from './pages/error/error.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ErrorModule } from './pages/error/error.module';
     RegisterModule,
     LoginModule,
     IndexModule,
-    ErrorModule
+    ErrorModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
