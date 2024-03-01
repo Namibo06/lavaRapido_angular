@@ -11,6 +11,7 @@ export type retornarHorarios={
         email:string
       },
       horario:{
+        cod:number,
         fullHour:string,
         hourMinute:string,
         date:string,

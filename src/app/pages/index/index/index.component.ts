@@ -37,6 +37,13 @@ export class IndexComponent {
   callbackError:boolean=false;
   messageError:string="";
 
+  email:string='';
+  confirmation:string='';
+  confirmationYes:string='sim';
+  confirmationNo:string='nao';
+  confirmationBtnConfirmar:string='Confirmar';
+  confirmationBtnRejeitar:string='Rejeitar';
+
   constructor(
     private service:ApiCarWashService,
     private cookie:CookieService
@@ -48,6 +55,7 @@ export class IndexComponent {
   getCookies(){
     this.token=this.cookie.get('token');
     this.user_id=this.cookie.get('id').toString();
+    this.email=this.cookie.get('email');
   }
 
   horarios(){
@@ -85,6 +93,34 @@ export class IndexComponent {
           this.callbackError=false;
           //window.location.href='/index';
         },5000);
+      }
+    });
+  }
+
+  confirmar(id:number){
+    this.confirmation=this.confirmationYes;
+    this.service.confirmacao(this.token,id,this.confirmation).subscribe({
+      next:(res)=>{
+        console.log(res);
+
+      },
+      error:(err)=>{
+        console.log(err);
+
+      }
+    });
+  }
+
+  rejeitar(id:number){
+    this.confirmation=this.confirmationNo;
+    this.service.rejeitando(this.token,id,this.confirmation).subscribe({
+      next:(res)=>{
+        console.log(res);
+
+      },
+      error:(err)=>{
+        console.log(err);
+
       }
     });
   }

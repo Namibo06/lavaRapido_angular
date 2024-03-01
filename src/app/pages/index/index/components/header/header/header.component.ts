@@ -5,8 +5,8 @@ import { faCarAlt } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls:['./header.component.css','./header.responsive.component.css']
 })
 export class HeaderComponent {
- car:IconDefinition=faCarAlt;
+  car:IconDefinition=faCarAlt;
 }

@@ -315,17 +315,19 @@
             <td>{{item.horario.hourMinute}}</td>
             <td>
               <!--colocar @if caso seja o adm,e depois  no else verificar o status se for sim  ou não colocar  bolinha verde  ou vermelha  com nome marcado ou rejeitado-->
-              @if (item.user.email === 'admin@gmail.com') {
-                <form action="" method="post">
-                  <input type="submit" value="Confirmar" name="sim">
-                  <input type="submit" value="Rejeitar" name="nao">
-                </form>
+              @if (email === 'admin@gmail.com') {
+              <input type="hidden" name="id" [(ngModel)]="item.horario.cod">
+              <input type="submit" name="sim" class="confirmar" [(ngModel)]="confirmationBtnConfirmar" (click)="confirmar(item.horario.cod)">
+              <input type="submit" name="nao" class="rejeitar" [(ngModel)]="confirmationBtnRejeitar" (click)="rejeitar(item.horario.cod)">
 
               }@else {
                 @if (item.horario.confirmado === 'nao') {
                   <div class="rejeitado"></div>
-                }@else {
+                }@else if (item.horario.confirmado === 'sim') {
                   <div class="confirmado"></div>
+                }
+                @else {
+                  <div class="andamento"></div>
                 }
               }
 

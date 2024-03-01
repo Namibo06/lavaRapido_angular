@@ -532,6 +532,8 @@ section.horario div.content-horario span fa-icon{
 
 table{
   width: 100%;
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 table th.nome,table th.data,table th.hora,table th.confirmacao{
@@ -546,6 +548,41 @@ table td{
   border-bottom: 1px solid #444;
 }
 
+tbody td:last-child{
+  display: flex;
+  flex-direction: row;
+  padding-left: 60px;
+}
+
+input[type=submit].confirmar{
+  background-color: rgb(0,200,200);
+  margin-right: 15px;
+  padding: 10px;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+input[type=submit].rejeitar{
+  background-color: rgb(200,0,0);
+  margin-right: 15px;
+  padding: 10px;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+tbody input:active{
+  position: relative;
+  top: 1px;
+}
+
 .rejeitado{
   width: 25px;
   height: 25px;
@@ -558,6 +595,14 @@ table td{
   width: 25px;
   height: 25px;
   background-color: rgb(0,200,200);
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.andamento{
+  width: 25px;
+  height: 25px;
+  background-color: #ccc;
   margin: 0 auto;
   border-radius: 50%;
 }

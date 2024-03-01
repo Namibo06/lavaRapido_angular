@@ -15,6 +15,7 @@ export class FooterComponent {
   twitter:IconDefinition=faTwitter;
   linkedIn:IconDefinition=faLinkedin;
 
+  
 
   constructor(){
 

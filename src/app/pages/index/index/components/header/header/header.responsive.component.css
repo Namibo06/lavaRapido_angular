@@ -1,0 +1,39 @@
+@media screen and (width < 750px) {
+  header{
+    flex-direction: column;
+  }
+
+  header div.title{
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (width < 530px) {
+  header div.links li{
+    margin-right: 15px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (width < 460px) {
+  header div.title h2,header div.title fa-icon{
+    font-size: 18px;
+  }
+
+  header div.links li{
+    margin-right: 10px;
+    font-size: 11px;
+  }
+}
+
+@media screen and (width < 360px) {
+  header div.links ul{
+    flex-direction: column;
+  }
+
+  header div.links li{
+    margin-right: 0px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}

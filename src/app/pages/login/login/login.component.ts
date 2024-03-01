@@ -45,6 +45,7 @@ export class LoginComponent {
         if(this.status===200){
           this.cookie.set('token',this.token,7);
           this.cookie.set('id',this.id.toString(),7);
+          this.cookie.set('email',this.email,7);
           this.callback=true;
 
           setTimeout(()=>{
