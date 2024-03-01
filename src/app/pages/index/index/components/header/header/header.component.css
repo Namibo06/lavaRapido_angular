@@ -3,7 +3,7 @@ header{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding:20px;
+  padding:30px 20px;
 }
 
 header div.title{
@@ -14,7 +14,7 @@ header div.title{
 
 header div.title fa-icon{
   font-size: 18px;
-  color: #444;
+  color: rgb(12,14,90);
   margin-right: 15px;
 }
 

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IndexComponent } from './index/index.component';
 import { HeaderModule } from './index/components/header/header.module';
 import { FooterModule } from './index/components/footer/footer.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -14,7 +15,8 @@ import { FooterModule } from './index/components/footer/footer.module';
   imports: [
     CommonModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    FontAwesomeModule
   ]
 })
 export class IndexModule { }
