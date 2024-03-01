@@ -1,0 +1,51 @@
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding:20px;
+}
+
+header div.title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header div.title fa-icon{
+  font-size: 18px;
+  color: #444;
+  margin-right: 15px;
+}
+
+header div.title h2{
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+}
+
+header div.links ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header div.links li{
+  margin-right: 20px;
+  list-style: none;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header div.links a{
+  text-decoration: none;
+  color: rgb(12,14,90);
+  transition: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+header div.links a:hover{
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgb(12,14,90);
+}
