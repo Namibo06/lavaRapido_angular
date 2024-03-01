@@ -6,6 +6,12 @@ import { FooterModule } from './index/components/footer/footer.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {register} from 'swiper/element/bundle';
 register();
+import { NgxMaskDirective,NgxMaskPipe, provideEnvironmentNgxMask, provideNgxMask } from 'ngx-mask';
+import { IConfig } from 'ngx-mask';
+
+const maskConfig:Partial<IConfig>={
+  validation:false,
+};
 
 @NgModule({
   declarations: [
@@ -17,6 +23,12 @@ register();
     HeaderModule,
     FooterModule,
     FontAwesomeModule,
+    NgxMaskDirective,
+    NgxMaskPipe,
+  ],
+  providers:[
+    provideEnvironmentNgxMask(maskConfig),
+    provideNgxMask()
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

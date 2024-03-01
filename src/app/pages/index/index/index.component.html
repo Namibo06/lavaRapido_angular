@@ -239,23 +239,79 @@
       </div><!--callback-->
 
       <form action="" method="post">
-        <input type="text" name="user_id">
+        <input type="hidden" name="user_id">
 
+        <div class="camp">
+          <label>Escolha uma data</label>
+          <input type="text" name="date" mask="00/00/0000">
+        </div><!--camp-->
+
+        <div class="camp">
+          <label>Escolha a hora</label>
+          <select name="hour">
+            <option value="">Escolha uma opção</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+          </select>
+        </div><!--camp-->
+
+        <div class="camp">
+          <label>Escolha os minutos</label>
+          <select name="minute">
+            <option value="">Escolha uma opção</option>
+            <option value="00">00</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+          </select>
+        </div><!--camp-->
+
+        <hr>
         <table>
           <thead>
-            <th style="width: 25%;">Data</th>
-            <th style="width: 25%;">Hora</th>
-            <th style="width: 25%;">Minuto</th>
-            <!--confirmacao para o adm e status para clientes-->
-            <th style="width: 25%;">Confirmação</th>
+            <tr>
+              <th style="width: 25%;">Data</th>
+              <th style="width: 25%;">Hora</th>
+              <th style="width: 25%;">Minuto</th>
+              <!--confirmacao para o adm e status para clientes-->
+              <th style="width: 25%;">Confirmação</th>
+            </tr>
           </thead>
           <tbody>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-              <!--colocar @if caso seja o adm,e depois  no else verificar o status se for sim  ou não colocar  bolinha verde  ou vermelha  com nome marcado ou rejeitado-->
-            </td>
+            <tr>
+              <!--resultados-->
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <!--colocar @if caso seja o adm,e depois  no else verificar o status se for sim  ou não colocar  bolinha verde  ou vermelha  com nome marcado ou rejeitado-->
+              </td>
+            </tr>
           </tbody>
         </table>
       </form>
