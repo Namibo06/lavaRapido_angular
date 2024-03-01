@@ -15,7 +15,8 @@ export type retornarHorarios={
         hourMinute:string,
         date:string,
         hour:string,
-        minute:string
+        minute:string,
+        confirmado:string
       }
     }
   ]

@@ -230,25 +230,26 @@
   </section><!--depoimentos-->
 
   <section class="horario">
-    <h2>Horários</h2>
-    <h1>Agende um horário e venha curtir esta experiência</h1>
-
     <div class="content-horario">
-      <div class="callback">
+      <h2>Horários</h2>
+      <h1>Agende um horário e venha curtir esta experiência</h1>
 
+      <div class="callback">
+        <p class="callbackSucess" *ngIf="callbackSucess">{{messageSucess}}</p>
+        <p class="callbackError" *ngIf="callbackError">{{messageError}}</p>
       </div><!--callback-->
 
-      <form action="" method="post">
-        <input type="hidden" name="user_id">
+      <form action="" method="post" (submit)="enviarHorario()">
+        <input type="hidden" name="user_id" [(ngModel)]="user_id">
 
         <div class="camp">
-          <label>Escolha uma data</label>
-          <input type="text" name="date" mask="00/00/0000">
+          <label>Digite uma data</label>
+          <input type="text" name="date" mask="00/00/0000" [(ngModel)]="date">
         </div><!--camp-->
 
         <div class="camp">
           <label>Escolha a hora</label>
-          <select name="hour">
+          <select name="hour" [(ngModel)]="hour">
             <option value="">Escolha uma opção</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -279,7 +280,7 @@
 
         <div class="camp">
           <label>Escolha os minutos</label>
-          <select name="minute">
+          <select name="minute" [(ngModel)]="minute">
             <option value="">Escolha uma opção</option>
             <option value="00">00</option>
             <option value="10">10</option>
@@ -290,31 +291,52 @@
             <option value="60">60</option>
           </select>
         </div><!--camp-->
-
-        <hr>
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 25%;">Nome</th>
-              <th style="width: 25%;">Data</th>
-              <th style="width: 25%;">Hora e Minuto</th>
-              <!--confirmacao para o adm e status para clientes-->
-              <th style="width: 25%;">Confirmação</th>
-            </tr>
-          </thead>
-          <tbody *ngFor="let item of this.api">
-            <tr>
-              <!--resultados-->
-              <td>{{item.user.first_name}}</td>
-              <td>{{item.horario.date}}</td>
-              <td>{{item.horario.hourMinute}}</td>
-              <td>
-                <!--colocar @if caso seja o adm,e depois  no else verificar o status se for sim  ou não colocar  bolinha verde  ou vermelha  com nome marcado ou rejeitado-->
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <button type="submit">Enviar</button>
       </form>
+
+      <span>Veja abaixo horários agendados <fa-icon [icon]="chevron"></fa-icon></span>
+
+      <hr>
+      <table>
+        <thead>
+          <tr>
+            <th class="nome">Nome</th>
+            <th class="data">Data</th>
+            <th class="hora">Hora e Minuto</th>
+            <!--confirmacao para o adm e status para clientes-->
+            <th class="confirmacao">Confirmação</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of this.api">
+          <tr>
+            <!--resultados-->
+            <td>{{item.user.first_name}}</td>
+            <td>{{item.horario.date}}</td>
+            <td>{{item.horario.hourMinute}}</td>
+            <td>
+              <!--colocar @if caso seja o adm,e depois  no else verificar o status se for sim  ou não colocar  bolinha verde  ou vermelha  com nome marcado ou rejeitado-->
+              @if (item.user.email === 'admin@gmail.com') {
+                <form action="" method="post">
+                  <input type="submit" value="Confirmar" name="sim">
+                  <input type="submit" value="Rejeitar" name="nao">
+                </form>
+
+              }@else {
+                @if (item.horario.confirmado === 'nao') {
+                  <div class="rejeitado"></div>
+                }@else {
+                  <div class="confirmado"></div>
+                }
+              }
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div><!--content-horario-->
   </section><!--horario-->
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
 </div><!--index-container-->

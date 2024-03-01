@@ -8,6 +8,7 @@ import {register} from 'swiper/element/bundle';
 register();
 import { NgxMaskDirective,NgxMaskPipe, provideEnvironmentNgxMask, provideNgxMask } from 'ngx-mask';
 import { IConfig } from 'ngx-mask';
+import { FormsModule } from '@angular/forms';
 
 const maskConfig:Partial<IConfig>={
   validation:false,
@@ -25,6 +26,7 @@ const maskConfig:Partial<IConfig>={
     FontAwesomeModule,
     NgxMaskDirective,
     NgxMaskPipe,
+    FormsModule
   ],
   providers:[
     provideEnvironmentNgxMask(maskConfig),

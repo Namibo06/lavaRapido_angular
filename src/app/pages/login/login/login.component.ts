@@ -14,6 +14,7 @@ export class LoginComponent {
   google:IconDefinition=faGoogle;
   apple:IconDefinition=faApple;
 
+  id:number=0;
   first_name:string='';
   last_name:string='';
   email:string='';
@@ -39,9 +40,11 @@ export class LoginComponent {
         this.token=res.token;
         this.status=res.status;
         this.message=res.message;
+        this.id=res.user.id;
 
         if(this.status===200){
           this.cookie.set('token',this.token,7);
+          this.cookie.set('id',this.id.toString(),7);
           this.callback=true;
 
           setTimeout(()=>{
