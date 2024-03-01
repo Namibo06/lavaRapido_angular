@@ -1,10 +1,8 @@
 footer{
   position: absolute;
   bottom: 0;
-  background-color: #2b2b2b;
-  color: #dfd9d9;
   padding: 25px;
-  width: 100%;
+  color: aliceblue;
 }
 
 footer p{

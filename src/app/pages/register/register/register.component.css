@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.container-register{
+  background-image: url('../../../../assets/lava-rapido.jpg');
+  background-position: 100% 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+main{
+  background-color: #ffffff;
+  width: 600px;
+  max-width: 95%;
+  height: 98vh;
+  z-index: 100;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  border-radius: 40px;
+}
+
+main h2{
+  font-family: "Great Vibes",cursive;
+  font-size: 45px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 50px;
+}
+
+main p{
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.success{
+  position: absolute;
+  top: -205px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: rgb(0,200,0);
+  z-index: 999;
+  border-radius: 10px;
+}
+
+.error{
+  position: absolute;
+  top: -205px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff0000;
+  z-index: 999;
+  border-radius: 10px;
+}
+
+form{
+  width: 100%;
+  max-width: 95%;
+  position: absolute;
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+form div.camp{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form div.camp input{
+  width: 60%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: 1px solid #444;
+  outline: 0;
+}
+
+form div.camp input:focus{
+  border: 1px solid rgb(0,0,200);
+}
+
+button[type=submit]{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(0,200,200);
+  border: 0;
+  border-radius: 15px;
+  padding: 10px;
+  width: 60%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button[type=submit]:active{
+  position: relative;
+  top: 1px;
+}
+
+button[type=submit]:hover{
+  background-color: rgb(13, 243, 220);
+}
+
+span{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+a{
+  text-decoration: none;
+  color: rgb(12,14,90);
+  transition: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+a:hover{
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgb(12,14,90);
+}

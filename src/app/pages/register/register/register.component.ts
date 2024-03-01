@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiUserService } from '../../../services/api-user.service';
 
 @Component({
   selector: 'app-register',
@@ -20,11 +21,47 @@ export class RegisterComponent {
   messageError:string='';
   callbackError:boolean=false;
 
-  constructor(){
+  constructor(
+    private service:ApiUserService
+  ){
 
   }
 
   registrar(){
-    
+    if(this.password !== this.confirm_password){
+      this.messageError="Senhas não batem";
+      this.callbackError=true;
+
+      setTimeout(()=>{
+        this.callbackError=false;
+        window.location.href='/register';
+      },3000);
+    }
+
+    this.service.cadastro(this.first_name,this.last_name,this.email,this.phone,this.password).subscribe({
+      next:(res)=>{
+        console.log(res);
+        this.message=res.message;
+        this.status=res.status;
+
+        if(this.status===200){
+          this.callback=true;
+
+          setTimeout(()=>{
+            this.callback=false;
+            window.location.href='/login';
+          },3000);
+        }
+      },
+      error:(err)=>{
+        console.log(err);
+        this.messageError="Campo(s) inválido(s)";
+        this.callbackError=true;
+        setTimeout(()=>{
+          this.callbackError=false;
+          window.location.href='/register';
+        },3000);
+      }
+    });
   }
 }

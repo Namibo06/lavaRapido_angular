@@ -1,29 +1,45 @@
-<main>
-  <form action="" method="post" (submit)="registrar()">
-    <div class="camp">
-      <input type="text" name="first_name" placeholder="Nome" [(ngModel)]="first_name" required>
-    </div>
+<div class="container-register">
+  <app-header-shared></app-header-shared>
 
-    <div class="camp">
-      <input type="text" name="last_name" placeholder="Sobrenome" [(ngModel)]="last_name" required>
-    </div>
+  <main>
+    <h2>Seja Bem Vindo(a)</h2>
 
-    <div class="camp">
-      <input type="email" name="email" placeholder="Email" [(ngModel)]="email" required>
-    </div>
+    <p>Continue com o cadastro e siga tendo uma experiência fantástica</p>
 
-    <div class="camp">
-      <input type="text" name="phone" placeholder="Telefone" [(ngModel)]="phone" required>
-    </div>
+    <form action="" method="post" (submit)="registrar()">
+      <p class="error" *ngIf="callbackError">{{messageError}}</p>
+      <p class="success" *ngIf="callback">{{message}}</p>
 
-    <div class="camp">
-      <input type="password" name="password" placeholder="Senha" [(ngModel)]="password" required>
-    </div>
+      <div class="camp">
+        <input type="text" name="first_name" [(ngModel)]="first_name" placeholder="Nome">
+      </div><!--camp-->
 
-    <div class="camp">
-      <input type="password" name="confirm_password" placeholder="Confirmar Senha" [(ngModel)]="confirm_password" required>
-    </div>
+      <div class="camp">
+        <input type="text" name="last_name" [(ngModel)]="last_name" placeholder="Sobrenome">
+      </div><!--camp-->
 
-    <button type="submit">Entrar</button>
-  </form>
-</main>
+      <div class="camp">
+        <input type="email" name="email" [(ngModel)]="email" placeholder="Email">
+      </div><!--camp-->
+
+      <div class="camp">
+        <input type="text" name="phone"  [(ngModel)]="phone"  placeholder="Telefone">
+      </div><!--camp-->
+
+      <div class="camp">
+        <input type="password" name="password" [(ngModel)]="password" placeholder="Senha">
+      </div><!--camp-->
+
+      <div class="camp">
+        <input type="password" name="confirm_password" [(ngModel)]="confirm_password" placeholder="Confirme a Senha">
+      </div><!--camp-->
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <span>Já tem conta? Clique <a [routerLink]="['/login']">aqui</a></span>
+  </main>
+
+  <app-footer-shared></app-footer-shared>
+</div><!--container-register-->
+
