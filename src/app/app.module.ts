@@ -16,6 +16,7 @@ import { LoginModule } from './pages/login/login.module';
 import { IndexModule } from './pages/index/index.module';
 import { ErrorModule } from './pages/error/error.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     IndexModule,
     ErrorModule,
     HttpClientModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

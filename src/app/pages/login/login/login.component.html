@@ -2,10 +2,13 @@
   <app-header-shared></app-header-shared>
 
   <main>
+    <h2>Iniciar Sessão</h2>
+
+    <p>Continue com o login e siga tendo uma experiência fantástica</p>
+
     <p *ngIf="callback" class="success">{{message}}</p>
     <p *ngIf="callbackError" class="error">{{messageError}}</p>
     <form action="" method="post" (submit)="autenticar()">
-
       <div class="camp">
         <input type="email" name="email" placeholder="Email" [(ngModel)]="email" required>
       </div><!--camp-->
@@ -15,6 +18,25 @@
       </div><!--camp-->
 
       <button type="submit">Entrar</button>
+
+      <span>Não tem conta? Clique <a [routerLink]="['/register']">aqui</a></span>
+
+      <div class="or">
+        <h3 class="left"></h3>
+        <h4>or</h4>
+        <h3 class="right"></h3>
+      </div><!--or-->
+
+      <div class="others-login">
+        <button type="button">
+          <fa-icon [icon]="google"></fa-icon>
+          Login com Google
+        </button>
+        <button type="button">
+          <fa-icon [icon]="apple"></fa-icon>
+          Login com Apple
+        </button>
+      </div><!--other-login-->
     </form>
   </main>
 

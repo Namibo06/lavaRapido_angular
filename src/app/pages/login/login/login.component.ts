@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ApiUserService } from '../../../services/api-user.service';
 import { CookieService } from 'ngx-cookie-service';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { faGoogle,faApple } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +11,9 @@ import { CookieService } from 'ngx-cookie-service';
   providers:[CookieService]
 })
 export class LoginComponent {
+  google:IconDefinition=faGoogle;
+  apple:IconDefinition=faApple;
+
   first_name:string='';
   last_name:string='';
   email:string='';

@@ -5,6 +5,8 @@ import { HeaderModule } from '../../shared/header/header.module';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { FooterModule } from '../../shared/footer/footer.module';
+import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -15,7 +17,9 @@ import { FooterModule } from '../../shared/footer/footer.module';
     CommonModule,
     HeaderModule,
     FooterModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
+    FontAwesomeModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -1,7 +1,17 @@
+@media screen and (width < 900px) {
+  app-header-shared,app-footer-shared{
+    display: none;
+  }
+
+  main{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
 @media screen and (width < 580px) {
   main{
-    right: 10px;
-    left: 10px;
     max-width: 96%;
   }
 
@@ -26,8 +36,6 @@
 
 @media screen and (width < 390px) {
   main{
-    right: 10px;
-    left: 6px;
     max-width: 96%;
   }
 
