@@ -4,7 +4,7 @@ import { ApiUserService } from '../../../services/api-user.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrls: ['./register.component.css','./register.responsive.component.css']
 })
 export class RegisterComponent {
   first_name:string='';
