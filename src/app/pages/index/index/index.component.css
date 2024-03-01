@@ -144,9 +144,6 @@ section.sobre div.content-sobre a{
   font-size: 18px;
   font-weight: bold;
   color: #444;
-}
-
-section.sobre div.content-sobre a{
   border-bottom: 2px solid rgb(12,14,90);
 }
 
@@ -163,3 +160,107 @@ section.sobre aside img{
   height: 500px;
   border-top-left-radius: 40px;
 }
+
+/*servicos*/
+section.servicos{
+  margin: 150px 40px 0 40px;
+  border-radius: 20px;
+  background-color: #e9e3e346;
+  display: flex;
+  flex-direction: row;
+}
+
+section.servicos div.content-servicos h2{
+  padding-top: 150px;
+  font-size: 18px;
+  width: 78px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 3px solid rgb(12,14,90);
+}
+
+section.servicos div.content-servicos h1{
+  padding: 20px 0 40px 0;
+  font-size: 35px;
+}
+
+section.servicos div.content-servicos p{
+  font-size: 17px;
+  color: #555;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+section.servicos div.servicos-box{
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+div.servicos-box div.servicos-single{
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.servicos-box div.servicos-single div{
+  background-color: #ff0000;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  color: #fff;
+}
+
+div.servicos-box div.servicos-single:nth-child(1) div fa-icon{
+  position: absolute;
+  top: 6px;
+  left: 7px;
+}
+
+div.servicos-box div.servicos-single:nth-child(2) div fa-icon{
+  position: absolute;
+  top: 6px;
+  left: 9px;
+}
+
+div.servicos-box div.servicos-single:nth-child(3) div fa-icon{
+  position: absolute;
+  top: 7px;
+  left: 8px;
+}
+
+div.servicos-box div.servicos-single:nth-child(4) div fa-icon{
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+
+div.servicos-box div.servicos-single p{
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section.servicos a{
+  position: relative;
+  top: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  border-bottom: 2px solid rgb(12,14,90);
+  padding-bottom: 2px;
+}
+
+section.servicos div.content-servicos,section.servicos aside{
+  width: 50%;
+}
+
+section.servicos aside img{
+  width: 400px;
+  height: 100%;
+  position: relative;
+  top: -30px;
+}
+
