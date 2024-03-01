@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faSnowflake } from '@fortawesome/free-regular-svg-icons';
-import { faArrowUpRightFromSquare, faBolt, faCar, faClipboardCheck, faClock, faSackDollar, faWind } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare, faBolt, faCar, faClipboardCheck, faClock, faQuoteRight, faSackDollar, faWind } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-index',
@@ -9,6 +9,7 @@ import { faArrowUpRightFromSquare, faBolt, faCar, faClipboardCheck, faClock, faS
   styleUrl: './index.component.css'
 })
 export class IndexComponent {
+  quote:IconDefinition=faQuoteRight;
   wind:IconDefinition=faWind;
   snow:IconDefinition=faSnowflake;
   check:IconDefinition=faClipboardCheck;

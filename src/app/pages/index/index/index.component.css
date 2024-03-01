@@ -340,3 +340,80 @@ div.content-galeria a{
   border-bottom: 2px solid rgb(12,14,90);
   padding-bottom: 2px;
 }
+
+/*depoimentos*/
+section.depoimentos{
+  padding-top: 200px;
+}
+
+section.depoimentos div.content-depoimentos h2{
+  font-size: 18px;
+  width: 115px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 3px solid rgb(12,14,90);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.depoimentos div.content-depoimentos h1{
+  padding: 20px 0 40px 0;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+div.content-depoimentos swiper-container{
+  padding: 0 120px;
+}
+
+div.content-depoimentos swiper-container swiper-slide div.depoimento-single{
+  border: 1px  solid #444;
+  width: 320px;
+  height: 350px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+swiper-slide div.parte-cima{
+  height: 65%;
+  background-color: #fff;
+}
+
+swiper-slide div.parte-cima p{
+  padding: 30px 20px 20px 20px;
+}
+
+
+swiper-slide div.parte-cima img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid #fff;
+}
+
+swiper-slide div.parte-cima span{
+  position: relative;
+  top: -105px;
+  left: 110px;
+  font-size: 50px;
+  color: #777;
+}
+
+swiper-slide div.parte-baixo{
+  height: 35%;
+  background-color: rgb(180, 0, 0);
+}
+
+swiper-slide div.parte-baixo p{
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;
+  position: relative;
+  top: 60px;
+}

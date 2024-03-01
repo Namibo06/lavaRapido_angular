@@ -136,6 +136,129 @@
     <div class="content-depoimentos">
       <h2>Depoimentos</h2>
       <h1>Aqui está o que os nossos clientes dizem</h1>
+
+      <swiper-container
+      pagination="true"
+      pagination-clickable="true"
+      slides-per-view="3"
+      >
+      <swiper-slide>
+        <div class="depoimento-single">
+          <div class="parte-cima">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit impedit, maiores eveniet eaque, fugiat eos in nemo expedita ipsum quae, similique nulla? Voluptas voluptatibus autem labore maxime minima nesciunt deleniti.</p>
+            <img src="../../../../assets/profile1.jpg" alt="profile1">
+            <span><fa-icon [icon]="quote"></fa-icon></span>
+          </div><!--parte-cima-->
+          <div class="parte-baixo">
+            <p>Joalisson</p>
+            <p>Desenvolvedor</p>
+          </div><!--parte-baixo-->
+        </div><!--depoimento-single-->
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="depoimento-single">
+          <div class="parte-cima">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit impedit, maiores eveniet eaque, fugiat eos in nemo expedita ipsum quae, similique nulla? Voluptas voluptatibus autem labore maxime minima nesciunt deleniti.</p>
+            <img src="../../../../assets/profile2.jpg" alt="profile2">
+            <span><fa-icon [icon]="quote"></fa-icon></span>
+          </div><!--parte-cima-->
+          <div class="parte-baixo">
+            <p>Jonatas</p>
+            <p>Gerente de Marketing</p>
+          </div><!--parte-baixo-->
+        </div><!--depoimento-single-->
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="depoimento-single">
+          <div class="parte-cima">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit impedit, maiores eveniet eaque, fugiat eos in nemo expedita ipsum quae, similique nulla? Voluptas voluptatibus autem labore maxime minima nesciunt deleniti.</p>
+            <img src="../../../../assets/profile3.jpg" alt="profile3">
+            <span><fa-icon [icon]="quote"></fa-icon></span>
+          </div><!--parte-cima-->
+          <div class="parte-baixo">
+            <p>Lili</p>
+            <p>Fisioterapeuta</p>
+          </div><!--parte-baixo-->
+        </div><!--depoimento-single-->
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="depoimento-single">
+          <div class="parte-cima">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit impedit, maiores eveniet eaque, fugiat eos in nemo expedita ipsum quae, similique nulla? Voluptas voluptatibus autem labore maxime minima nesciunt deleniti.</p>
+            <img src="../../../../assets/profile1.jpg" alt="profile1">
+            <span><fa-icon [icon]="quote"></fa-icon></span>
+          </div><!--parte-cima-->
+          <div class="parte-baixo">
+            <p>Ludmilla</p>
+            <p>Dentista</p>
+          </div><!--parte-baixo-->
+        </div><!--depoimento-single-->
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="depoimento-single">
+          <div class="parte-cima">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit impedit, maiores eveniet eaque, fugiat eos in nemo expedita ipsum quae, similique nulla? Voluptas voluptatibus autem labore maxime minima nesciunt deleniti.</p>
+            <img src="../../../../assets/profile2.jpg" alt="profile2">
+            <span><fa-icon [icon]="quote"></fa-icon></span>
+          </div><!--parte-cima-->
+          <div class="parte-baixo">
+            <p>Pedro</p>
+            <p>Advogado</p>
+          </div><!--parte-baixo-->
+        </div><!--depoimento-single-->
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="depoimento-single">
+          <div class="parte-cima">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit impedit, maiores eveniet eaque, fugiat eos in nemo expedita ipsum quae, similique nulla? Voluptas voluptatibus autem labore maxime minima nesciunt deleniti.</p>
+            <img src="../../../../assets/profile3.jpg" alt="profile3">
+            <span><fa-icon [icon]="quote"></fa-icon></span>
+          </div><!--parte-cima-->
+          <div class="parte-baixo">
+            <p>Laura</p>
+            <p>Atendente</p>
+          </div><!--parte-baixo-->
+        </div><!--depoimento-single-->
+      </swiper-slide>
+      </swiper-container>
     </div><!--content-depoimentos-->
   </section><!--depoimentos-->
+
+  <section class="horario">
+    <h2>Horários</h2>
+    <h1>Agende um horário e venha curtir esta experiência</h1>
+
+    <div class="content-horario">
+      <div class="callback">
+
+      </div><!--callback-->
+
+      <form action="" method="post">
+        <input type="text" name="user_id">
+
+        <table>
+          <thead>
+            <th style="width: 25%;">Data</th>
+            <th style="width: 25%;">Hora</th>
+            <th style="width: 25%;">Minuto</th>
+            <!--confirmacao para o adm e status para clientes-->
+            <th style="width: 25%;">Confirmação</th>
+          </thead>
+          <tbody>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <!--colocar @if caso seja o adm,e depois  no else verificar o status se for sim  ou não colocar  bolinha verde  ou vermelha  com nome marcado ou rejeitado-->
+            </td>
+          </tbody>
+        </table>
+      </form>
+    </div><!--content-horario-->
+  </section><!--horario-->
 </div><!--index-container-->
