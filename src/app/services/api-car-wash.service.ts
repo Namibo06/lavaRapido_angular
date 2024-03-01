@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { retornarHorarios } from '../models/retornarHorarios';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +13,7 @@ export class ApiCarWashService {
     private http:HttpClient
   ) { }
 
-  retornarHorarios(){
-    return this.http.get(this.urlRetornarHorarios);
+  retornarHorarios():Observable<retornarHorarios>{
+    return this.http.get<retornarHorarios>(this.urlRetornarHorarios);
   }
 }

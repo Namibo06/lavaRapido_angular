@@ -295,19 +295,19 @@
         <table>
           <thead>
             <tr>
+              <th style="width: 25%;">Nome</th>
               <th style="width: 25%;">Data</th>
-              <th style="width: 25%;">Hora</th>
-              <th style="width: 25%;">Minuto</th>
+              <th style="width: 25%;">Hora e Minuto</th>
               <!--confirmacao para o adm e status para clientes-->
               <th style="width: 25%;">Confirmação</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody *ngFor="let item of this.api">
             <tr>
               <!--resultados-->
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>{{item.user.first_name}}</td>
+              <td>{{item.horario.date}}</td>
+              <td>{{item.horario.hourMinute}}</td>
               <td>
                 <!--colocar @if caso seja o adm,e depois  no else verificar o status se for sim  ou não colocar  bolinha verde  ou vermelha  com nome marcado ou rejeitado-->
               </td>
