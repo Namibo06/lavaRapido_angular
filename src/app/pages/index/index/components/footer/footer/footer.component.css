@@ -1,0 +1,67 @@
+div.footer-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 40px 20px 40px;
+  color: #fff;
+  background-color: #ff0000;
+}
+
+div.footer-container div.dados div.title{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 4px;
+}
+
+div.footer-container div.dados div.title fa-icon{
+  margin-right: 10px;
+  font-size: 19px;
+}
+
+div.footer-container div.dados div.title p{
+  font-size: 19px;
+}
+
+div.dados p{
+  width: 500px;
+}
+
+div.adress p:nth-child(1){
+  font-size: 22px;
+  padding-bottom: 8px;
+}
+
+div.adress p:nth-child(2){
+  width: 190px;
+  font-size: 16px;
+}
+
+div.contato p:nth-child(1){
+  font-size: 22px;
+  padding-bottom: 8px;
+}
+
+div.contato p:nth-child(2),div.contato p:nth-child(3){
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+div.contato ul{
+  display: flex;
+  flex-direction: row;
+}
+
+div.contato ul li{
+  list-style-type: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+div.contato ul li:last-child{
+  margin-right: 0;
+}
+
+div.contato ul li fa-icon{
+  font-size: 18px;
+}
+
