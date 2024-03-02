@@ -4,7 +4,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 700px;
-
   z-index: 1;
 }
 
@@ -96,7 +95,7 @@ div.content-information h2{
 }
 
 div.content-information p{
-  width: 350px;
+  width: 300px;
   text-align: left;
 }
 

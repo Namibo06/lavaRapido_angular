@@ -8,7 +8,7 @@ import { CookieService } from 'ngx-cookie-service';
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
-  styleUrl: './index.component.css'
+  styleUrls: ['./index.component.css','./index.responsive.component.css']
 })
 export class IndexComponent {
   quote:IconDefinition=faQuoteRight;
