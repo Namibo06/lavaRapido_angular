@@ -202,7 +202,7 @@ div.servicos-box div.servicos-single{
   align-items: center;
 }
 
-div.servicos-box div.servicos-single div{
+div.servicos-box div.servicos-single div {
   background-color: #ff0000;
   width: 30px;
   height: 30px;
@@ -221,7 +221,7 @@ div.servicos-box div.servicos-single:nth-child(1) div fa-icon{
 div.servicos-box div.servicos-single:nth-child(2) div fa-icon{
   position: absolute;
   top: 6px;
-  left: 9px;
+  left: 6px;
 }
 
 div.servicos-box div.servicos-single:nth-child(3) div fa-icon{
@@ -372,6 +372,8 @@ div.content-depoimentos swiper-container swiper-slide div.depoimento-single{
   height: 350px;
   margin-bottom: 60px;
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 swiper-slide div.parte-cima{
