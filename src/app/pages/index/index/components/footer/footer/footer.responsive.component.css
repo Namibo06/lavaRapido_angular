@@ -1,0 +1,21 @@
+@media screen and (width < 930px) {
+  div.footer-container{
+    padding: 30px 20px 20px 20px;
+  }
+}
+
+@media screen and (width < 890px) {
+  div.footer-container{
+    flex-direction: column;
+  }
+
+  div.dados p{
+    width: 700px;
+    max-width: 95%;
+    text-align: justify;
+  }
+
+  div.dados,div.adress{
+    margin-bottom: 30px;
+  }
+}

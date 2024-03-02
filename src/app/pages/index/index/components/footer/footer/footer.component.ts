@@ -7,7 +7,7 @@ import { faCar } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrls: ['./footer.component.css','./footer.responsive.component.css']
 })
 export class FooterComponent {
   car:IconDefinition=faCar;
@@ -15,7 +15,7 @@ export class FooterComponent {
   twitter:IconDefinition=faTwitter;
   linkedIn:IconDefinition=faLinkedin;
 
-  
+
 
   constructor(){
 
