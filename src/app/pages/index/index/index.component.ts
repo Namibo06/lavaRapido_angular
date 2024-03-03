@@ -44,6 +44,7 @@ export class IndexComponent {
   confirmationBtnConfirmar:string='Confirmar';
   confirmationBtnRejeitar:string='Rejeitar';
 
+  //esconder:boolean=false;
 
   constructor(
     private service:ApiCarWashService,
