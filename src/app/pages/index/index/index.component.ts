@@ -44,6 +44,7 @@ export class IndexComponent {
   confirmationBtnConfirmar:string='Confirmar';
   confirmationBtnRejeitar:string='Rejeitar';
 
+
   constructor(
     private service:ApiCarWashService,
     private cookie:CookieService
@@ -71,7 +72,6 @@ export class IndexComponent {
   }
 
   enviarHorario(){
-
     this.service.postHorario(this.token,this.user_id,this.date,this.hour,this.minute).subscribe({
       next:(res)=>{
         console.log(res);

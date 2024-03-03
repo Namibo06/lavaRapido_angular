@@ -239,60 +239,64 @@
         <p class="callbackError" *ngIf="callbackError">{{messageError}}</p>
       </div><!--callback-->
 
-      <form action="" method="post" (submit)="enviarHorario()">
-        <input type="hidden" name="user_id" [(ngModel)]="user_id">
+      @if (!this.email) {
+        <h1 class="without-email">Para marcar um hórario,inicie uma sessão <a href="">aqui</a></h1><!--without-email-->
+      }@else {
+        <form action="" method="post" (submit)="enviarHorario()">
+          <input type="hidden" name="user_id" [(ngModel)]="user_id">
 
-        <div class="camp">
-          <label>Digite uma data</label>
-          <input type="text" name="date" mask="00/00/0000" [(ngModel)]="date">
-        </div><!--camp-->
+          <div class="camp">
+            <label>Digite uma data</label>
+            <input type="text" name="date" mask="00/00/0000" [(ngModel)]="date">
+          </div><!--camp-->
 
-        <div class="camp">
-          <label>Escolha a hora</label>
-          <select name="hour" [(ngModel)]="hour">
-            <option value="">Escolha uma opção</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
-            <option value="21">21</option>
-            <option value="22">22</option>
-            <option value="23">23</option>
-            <option value="24">24</option>
-          </select>
-        </div><!--camp-->
+          <div class="camp">
+            <label>Escolha a hora</label>
+            <select name="hour" [(ngModel)]="hour">
+              <option value="">Escolha uma opção</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+            </select>
+          </div><!--camp-->
 
-        <div class="camp">
-          <label>Escolha os minutos</label>
-          <select name="minute" [(ngModel)]="minute">
-            <option value="">Escolha uma opção</option>
-            <option value="00">00</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-            <option value="50">50</option>
-            <option value="60">60</option>
-          </select>
-        </div><!--camp-->
-        <button type="submit">Enviar</button>
-      </form>
+          <div class="camp">
+            <label>Escolha os minutos</label>
+            <select name="minute" [(ngModel)]="minute">
+              <option value="">Escolha uma opção</option>
+              <option value="00">00</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+              <option value="60">60</option>
+            </select>
+          </div><!--camp-->
+          <button type="submit">Enviar</button>
+        </form>
+      }
 
       <span>Veja abaixo horários agendados <fa-icon [icon]="chevron"></fa-icon></span>
 

@@ -34,7 +34,7 @@ export class ApiCarWashService {
       })
     }
 
-    return this.http.post<marcar_horario>(this.urlEnviarHorarios,body);
+    return this.http.post<marcar_horario>(this.urlEnviarHorarios,body,httpOptions);
   }
 
   confirmacao(token:string,id:number,confirmation:string){

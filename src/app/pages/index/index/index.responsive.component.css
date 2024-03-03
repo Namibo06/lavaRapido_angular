@@ -50,6 +50,7 @@
   }
 }
 
+
 @media screen and (width < 930px) {
   /*servicos*/
   section.servicos{
@@ -123,9 +124,6 @@
     width: 500px;
     max-width: 90%;
     text-align: justify;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 15px;
   }
 
@@ -140,6 +138,7 @@
   div.content-galeria picture div.fotos-esquerda img{
     width: 100%;
     height: 100%;
+    margin: 0 0px 0 0px;
   }
 
   div.content-galeria picture div.fotos-esquerda img:nth-child(2){
@@ -149,7 +148,7 @@
   div.content-galeria picture div.fotos-direita img{
     width: 100%;
     height: 100%;
-    margin: 0 10px 0 10px;
+    margin: 0 0px 0 0px;
   }
 
   div.content-galeria a{
