@@ -51,11 +51,11 @@
   }
 }
 
-
 @media screen and (width < 930px) {
   /*servicos*/
   section.servicos{
-    height: 700px;
+    height: auto;
+    padding: 30px 20px 60px 20px;
   }
 
   section.servicos aside{
@@ -66,17 +66,26 @@
     width: 100%;
   }
 
+  section.servicos div.content-servicos h1{
+    text-align: center;
+  }
+
   section.servicos div.content-servicos h2{
     padding-top: 50px;
+    text-align: center;
+    margin: 0 auto;
   }
 
   section.servicos div.content-servicos p{
     width: 500px;
     max-width: 95%;
+    padding: 0 10px;
+    text-align: justify;
   }
 
   section.servicos div.servicos-box{
     padding-top: 30px;
+    padding-left: 30px;
     display: flex;
     flex-direction: column;
   }
@@ -98,6 +107,10 @@
     width: 90%;
     height: 83.5%;
   }
+
+  section.servicos a{
+    margin-left: 20px;
+  }
 }
 
 @media screen and (width< 860px) {
@@ -114,7 +127,7 @@
   /*servicos*/
   section.servicos{
     margin: 150px 10px 0px 10px;
-    height: 800px;
+    height: auto;
   }
 
   section.servicos div.content-servicos p{
@@ -234,7 +247,7 @@
   /*servicos*/
   section.servicos{
     margin: 150px 10px 0px 10px;
-    height: 800px;
+    height: auto;
   }
 
   section.servicos div.content-servicos p{
@@ -354,7 +367,7 @@
   /*servicos*/
   section.servicos{
     margin: 150px 5px 0px 5px;
-    height: 900px;
+    height: auto;
   }
 
   section.servicos div.content-servicos p{
@@ -442,7 +455,7 @@
 
   /*servicos*/
   section.servicos{
-    height: 1000px;
+    height: auto;
   }
 
   section.servicos div.content-servicos p{
@@ -576,7 +589,6 @@
     padding-left: 10px;
   }
 
-
   input[type=submit].confirmar{
     margin-right: 0px;
     padding: 8px;
@@ -601,7 +613,7 @@
 
   /*servicos*/
   section.servicos{
-    height: 1000px;
+    height: auto;
   }
 
   section.servicos div.content-servicos h2{
@@ -674,5 +686,11 @@
     font-size: 10px;
     margin: 0;
     width: 60px;
+  }
+
+  .rejeitado,.confirmado{
+    width: 15px;
+    height: 15px;
+    margin: 10px auto;
   }
 }
