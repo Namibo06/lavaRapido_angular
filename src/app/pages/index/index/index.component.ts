@@ -125,4 +125,12 @@ export class IndexComponent {
       }
     });
   }
+
+  irAteLocalComScroll(name:string){
+    if(name==="horario"){
+      const btn_horario=document.getElementById('horario');
+
+      btn_horario?.scrollIntoView({'behavior':'smooth'});
+    }
+  }
 }
